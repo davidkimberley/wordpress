@@ -13,11 +13,11 @@ add_action( 'rest_api_init', function(){
 			}
 
 			if(   username_exists( $request[ 'username' ] ) ){
-				return rest_ensure_response( ['available' => true ] );
+				return rest_ensure_response( ['available' => false ] );
             } else {
             
 			
-			return rest_ensure_response( [ 'available' => false ] );
+			return rest_ensure_response( [ 'available' => true ] );
 }
 
 		}
